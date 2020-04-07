@@ -1,0 +1,7 @@
+on mmi
+    setprop sys.usb.config mtp,diag
+
+service initusb /system/bin/sh /system/etc/init.bq.usb.sh
+    class late_start
+    user system
+    oneshot

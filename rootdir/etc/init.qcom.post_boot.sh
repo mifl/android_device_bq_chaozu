@@ -247,7 +247,7 @@ function configure_zram_parameters() {
             if [ $MemTotal -gt 3145728 ]; then
                 echo 1073741824 > /sys/block/zram0/disksize
             else
-                echo 536870912 > /sys/block/zram0/disksize
+                echo 792723456 > /sys/block/zram0/disksize
             fi
         fi
         mkswap /dev/block/zram0
