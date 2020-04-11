@@ -238,14 +238,6 @@ LOCAL_SRC_FILES    := etc/init.bq.usb.rc
 LOCAL_MODULE_PATH  := $(TARGET_ROOT_OUT)
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE       := mmc-info.sh
-LOCAL_MODULE_TAGS  := optional eng
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/mmc-info.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)
-include $(BUILD_PREBUILT)
-
 # vendor files that live under device/bq/chaozu/rootdir/etc/
 
 include $(CLEAR_VARS)
