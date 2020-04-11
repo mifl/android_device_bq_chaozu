@@ -75,13 +75,6 @@ service stop_diag_mdlog /system/vendor/bin/diag_mdlog -k
     disable
     oneshot
 
-service bqcheck /system/bin/sh /system/etc/init.bq.check.sh
-    class late_start
-    user root
-    oneshot
-    seclabel u:r:bqcheck:s0
-
-
 on property:persist.qxdm.enable=1
     start diag_mdlog
 
@@ -133,7 +126,6 @@ on property:sys.shutdown.requested=*
    start bootanim
 
 on property:sys.boot_completed=1
-   start bqcheck
    start tpver
 
 on property:persist.wlan.cnss_diag=1
