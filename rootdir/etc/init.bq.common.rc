@@ -91,13 +91,6 @@ service mmc-info /system/bin/sh /system/etc/mmc-info.sh
 on property:sys.mmc-info=1
     start mmc-info
 
-service tpver /system/bin/sh /system/etc/init.bq.tp.sh
-    class late_start
-    disabled
-    user root
-    oneshot
-    seclabel u:r:tpver:s0
-
 service tcpdumpall /system/xbin/tcpdump -i any -p -s 0 -w /sdcard/tcpdump_all.pcap
     user root
     disabled
@@ -124,9 +117,6 @@ on property:sys.shutdown.requested=*
    setprop service.bootanim.exit 0
    setprop sys.shutdownanimation.init 1
    start bootanim
-
-on property:sys.boot_completed=1
-   start tpver
 
 on property:persist.wlan.cnss_diag=1
    start cnss_diag
