@@ -27,19 +27,6 @@ on boot
     chmod 0660 /sys/android_touch/wakeup_gesture_enable
 
 on post-fs-data
-service BQlogSD /system/bin/BQlog sd
-    class main
-    user root
-    disabled
-    seclabel u:r:sdlog:s0
-    oneshot
-
-on property:persist.service.BQlogSD.enable=0
-    stop BQlogSD
-
-on property:persist.service.BQlogSD.enable=1
-    start BQlogSD
-
 service BQlogLocal /system/bin/BQlog local
     class main
     user root
