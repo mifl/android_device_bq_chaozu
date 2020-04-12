@@ -272,15 +272,15 @@ on charger
 #   group radio diag inet log
 #   disabled
 
-service vendor.imsrcsservice /system/vendor/bin/imsrcsd
-   class main
-   user system
-   group radio diag inet log
-   disabled
+#service vendor.imsrcsservice /system/vendor/bin/imsrcsd
+#    class main
+#    user system
+#    group radio diag inet log
+#    disabled
 
-on property:vendor.ims.DATA_DAEMON_STATUS=1
+#on property:vendor.ims.DATA_DAEMON_STATUS=1
 #   start ims_rtp_daemon
-    start vendor.imsrcsservice
+#   start vendor.imsrcsservice
 
 #service hbtp /system/vendor/bin/hbtp_daemon
 #    class main
