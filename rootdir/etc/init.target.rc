@@ -131,10 +131,10 @@ service qseecomd /vendor/bin/qseecomd
 #   user root
 #   disabled
 
-service perfd /system/vendor/bin/perfd
-   class main
-   user root
-   disabled
+#service perfd /system/vendor/bin/perfd
+#   class main
+#   user root
+#   disabled
 
 service gamed /system/vendor/bin/gamed
    class main
