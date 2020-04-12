@@ -107,15 +107,15 @@ on property:persist.usb.chgdisabled=0
 #   user root
 #   group root
 
-service qrngp /system/bin/qrngp -f
-   class main
-   user root
-   group root
-   oneshot
-   disabled
+#service qrngp /system/bin/qrngp -f
+#   class main
+#   user root
+#   group root
+#   oneshot
+#   disabled
 
-on property:sys.boot_completed=1
-   start qrngp
+#on property:sys.boot_completed=1
+#   start qrngp
 
 service qseecomd /vendor/bin/qseecomd
    class core
