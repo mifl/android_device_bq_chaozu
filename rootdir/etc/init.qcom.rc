@@ -1130,12 +1130,12 @@ on charger
     start qcom-post-boot
 
 #add poweroffhandler
-service poweroffhandler /system/vendor/bin/poweroffhandler
-    class core
-    user media
-    group graphics audio
-    disabled
-    oneshot
+#service poweroffhandler /system/vendor/bin/poweroffhandler
+#    class core
+#    user media
+#    group graphics audio
+#    disabled
+#    oneshot
 
 on property:init.svc.surfaceflinger=restarting
     stop hwcomposer-2-1
