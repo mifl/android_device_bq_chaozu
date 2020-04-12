@@ -27,7 +27,7 @@
 #
 #
 
-import init.carrier.rc
+#import init.carrier.rc
 import init.bq.common.rc
 
 on early-init
