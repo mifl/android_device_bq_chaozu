@@ -507,11 +507,11 @@ on property:bluetooth.dun.status=stopped
 on property:ro.bluetooth.ftm_enabled=true
     start ftmd
 
-on property:bluetooth.startbtsnoop=true
-    start btsnoop
+#on property:bluetooth.startbtsnoop=true
+#    start btsnoop
 
-on property:bluetooth.startbtsnoop=false
-    stop btsnoop
+#on property:bluetooth.startbtsnoop=false
+#    stop btsnoop
 
 on property:bluetooth.startbtlogger=true
     start bt_logger
@@ -582,12 +582,12 @@ service bt-dun /system/bin/dun-server /dev/smd7 /dev/rfcomm0
     disabled
     oneshot
 
-service btsnoop /system/bin/btsnoop
-   user bluetooth
-   group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
-   class late_start
-   disabled
-   oneshot
+#service btsnoop /system/bin/btsnoop
+#  user bluetooth
+#  group bluetooth net_bt_admin sdcard_rw sdcard_r media_rw
+#  class late_start
+#  disabled
+#  oneshot
 
 service bt_logger /system/bin/bt_logger
    user bluetooth
