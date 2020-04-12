@@ -251,15 +251,15 @@ service imsstarter /vendor/bin/init.qti.ims.sh
 on property:vold.decrypt=trigger_restart_framework
     start imsstarter
 
-service imsqmidaemon /system/vendor/bin/imsqmidaemon
-    class main
-    user system
-    socket ims_qmid stream 0660 system radio
-    group radio log diag
-    disabled
+#service imsqmidaemon /system/vendor/bin/imsqmidaemon
+#    class main
+#    user system
+#    socket ims_qmid stream 0660 system radio
+#    group radio log diag
+#    disabled
 
-on property:service.qti.ims.enabled=1
-    start imsqmidaemon
+#on property:service.qti.ims.enabled=1
+#    start imsqmidaemon
 
 #service imsdatadaemon /system/vendor/bin/imsdatadaemon
 #    class main
