@@ -299,19 +299,19 @@ service dts_configurator /system/vendor/bin/dts_configurator
     group media audio
     oneshot
 
-service dtseagleservice /system/vendor/bin/dts_eagle_service
-    class late_start
-    user system
-    group audio media
-    disabled
+#service dtseagleservice /system/vendor/bin/dts_eagle_service
+#    class late_start
+#    user system
+#    group audio media
+#    disabled
 
 service adsprpcd /system/vendor/bin/adsprpcd
     class main
     user media
     group media
 
-on property:init.svc.dts_configurator=stopped
-    start dtseagleservice
+#on property:init.svc.dts_configurator=stopped
+#    start dtseagleservice
 
 service per_mgr /system/vendor/bin/pm-service
     class core
