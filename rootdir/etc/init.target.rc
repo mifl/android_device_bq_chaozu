@@ -74,7 +74,7 @@ on post-fs-data
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
     #mkdir /data/vendor/hbtp 0750 system system
-    mkdir /data/misc/dts 0770 media audio
+    #mkdir /data/misc/dts 0770 media audio
 
 
 #Create folder for mm-qcamera-daemon
@@ -293,11 +293,11 @@ on property:vendor.ims.DATA_DAEMON_STATUS=1
 #    group system
 #    disabled
 
-service dts_configurator /system/vendor/bin/dts_configurator
-    class late_start
-    user system
-    group media audio
-    oneshot
+#service dts_configurator /system/vendor/bin/dts_configurator
+#    class late_start
+#    user system
+#    group media audio
+#    oneshot
 
 #service dtseagleservice /system/vendor/bin/dts_eagle_service
 #    class late_start
