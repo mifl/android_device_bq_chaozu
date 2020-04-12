@@ -203,12 +203,12 @@ on boot
     chown system system /persist/speccfg/submask
     chown system system /persist/speccfg/partition
 
-service ppd /system/vendor/bin/mm-pp-dpps
-    class late_start
-    disabled
-    user system
-    socket pps stream 0660 system system
-    group system graphics
+#service ppd /system/vendor/bin/mm-pp-dpps
+#    class late_start
+#    disabled
+#    user system
+#    socket pps stream 0660 system system
+#    group system graphics
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd
