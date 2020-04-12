@@ -239,12 +239,12 @@ on charger
     setprop persist.sys.usb.config mass_storage
     start hvdcp_opti
 
-service imsstarter /vendor/bin/init.qti.ims.sh
-    class main
-    oneshot
+#service imsstarter /vendor/bin/init.qti.ims.sh
+#    class main
+#    oneshot
 
-on property:vold.decrypt=trigger_restart_framework
-    start imsstarter
+#on property:vold.decrypt=trigger_restart_framework
+#    start imsstarter
 
 #service imsqmidaemon /system/vendor/bin/imsqmidaemon
 #    class main
